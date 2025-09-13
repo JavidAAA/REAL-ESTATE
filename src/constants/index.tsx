@@ -1,3 +1,5 @@
+import { Badge } from "lucide-react";
+
 export type ListingProperty = {
   id: number;
   title: string;
@@ -10,8 +12,6 @@ export type ListingProperty = {
   type: string;
 };
 
-
-
 export const listingsProperties = [
     {
         id: 1,
@@ -23,6 +23,7 @@ export const listingsProperties = [
         baths: 4,
         sqft: "4,200",
         type: "Villa",
+
     },
     {
         id: 2,
@@ -46,4 +47,15 @@ export const listingsProperties = [
         sqft: "6,500",
         type: "Estate",
     },
+    {
+        id: 4,
+        title: "Waterfront Estate",
+        location: "Malibu, CA",
+        price: "$12,000,000",
+        image: "/mulia.webp",
+        beds: 6,
+        baths: 5,
+        sqft: "6,500",
+        type: "Estate",
+    }
 ]

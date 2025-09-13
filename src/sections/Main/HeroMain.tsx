@@ -5,11 +5,11 @@ import { Search, MapPin, Home, DollarSign } from "lucide-react"
 
 export function HeroMain() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[700px] md:min-h-screen flex items-center justify-center overflow-hidden px-10">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img src="/bg-hero.jpg" alt="Luxury Property" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/80"/>
       </div>
 
       {/* Content */}

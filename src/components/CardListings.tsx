@@ -12,7 +12,7 @@ const CardListings = ({ property }: CardListingsProps) => {
             <div className='relative overflow-hidden'>
                 <img src={property.image} alt={property.title} className='w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300' />
                 <div className='absolute top-4 left-4'>
-                    <div className="bg-amber-500 text-black px-3 py-1 rounded-[5px] font-semibold text-sm">
+                    <div className="bg-primary text-black px-3 py-1 rounded-[5px] font-semibold text-sm">
                         {property.type}
                     </div>
                 </div>
