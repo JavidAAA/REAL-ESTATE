@@ -13,7 +13,7 @@ export function HeroMain() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-96 md:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
           Discover Your
           <span className="block text-primary">Dream Property</span>

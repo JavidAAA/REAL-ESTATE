@@ -36,14 +36,15 @@ const SearchBox = () => {
             value={query}
             onChange={handleSearch}
             placeholder="Search"
-            className="sm:flex-[0.8] h-[60%] bg-gray-100 block rounded-lg outline-none px-4 placeholder:text-sm text-black"
+            className="sm:flex-[0.9] h-[60%] bg-gray-100 block rounded-lg outline-none px-4 placeholder:text-sm text-black"
           />
-          <div className="flex items-center flex-[0.2] ml-8 space-x-8">
+          <div className="flex items-center space-x-4">
             <div className="lg:flex hidden items-center cursor-pointer">
               <HiAdjustmentsHorizontal className="text-gray-700 w-6 h-6" />
               <p className="text-gray-700 font-semibold">Advanced</p>
             </div>
-            <div className="w-12 h-12 bg-primary flex items-center hover:bg-primary/80 transition-all duration-150 cursor-pointer justify-center text-white rounded-full">
+
+            <div className="w-12 h-12 bg-primary flex items-center hover:bg-primary/80 transition-all duration-150 cursor-pointer justify-center text-white rounded-full -mr-2">
               <FaSearch />
             </div>
           </div>

@@ -4,6 +4,7 @@ import { Navbar } from "@/sections/Navbar";
 import MainPage from "@/pages/MainPage";
 import Footer from "@/sections/Footer";
 
+
 export default function Home() {
   return (
     <div className="">
