@@ -1,18 +1,18 @@
 import AboutMain from '@/sections/Main/AboutMain'
 import { HeroMain } from '@/sections/Main/HeroMain'
-import Listings from '@/sections/Main/Listings'
+import MainListing from '@/sections/Main/MainListing'
 import TestimonialMain from '@/sections/Main/TestimonialMain'
 import React from 'react'
 
 const MainPage = () => {
   return (
     <div>
-        <HeroMain/>
-        <div className='px-5'>
-          <Listings/>
-          <AboutMain/>
-          <TestimonialMain/>
-        </div>
+      <HeroMain />
+      <div className='px-5'>
+        <MainListing />
+        <AboutMain />
+        <TestimonialMain />
+      </div>
     </div>
   )
 }
