@@ -1,5 +1,6 @@
 import React from 'react'
 import { Award, Users, Home, TrendingUp } from "lucide-react"
+import Link from 'next/link'
 
 const stats = [
   { icon: Home, label: "Properties Sold", value: "500+" },
@@ -10,9 +11,9 @@ const stats = [
 
 const AboutMain = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
               Your Trusted Partner in Luxury Real Estate
@@ -26,11 +27,11 @@ const AboutMain = () => {
               From exclusive penthouses to waterfront estates, we curate only the finest properties that meet our
               rigorous standards of luxury, location, and investment potential.
             </p>
-            <button>
-                <div className='bg-primary hover:bg-primary/90 px-10 py-2 rounded-lg'>
-                    Learn More
+            <Link href='/about'>
+                <div className='bg-primary text-center hover:bg-primary/90 px-10 py-2 rounded-lg w-full max-w-44 text-black font-semibold'>
+                    Read More
                 </div>
-            </button>
+            </Link>
           </div>
 
           <div className="relative">

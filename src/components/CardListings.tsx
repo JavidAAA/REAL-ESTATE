@@ -1,6 +1,7 @@
 import React from 'react'
 import { ListingProperty } from '@/constants';
 import { MapPin, Bed, Square, Bath } from 'lucide-react';
+import Link from 'next/link';
 
 type CardListingsProps = {
     property: ListingProperty;
@@ -26,7 +27,7 @@ const CardListings = ({ property }: CardListingsProps) => {
                 <h3 className="text-xl font-bold text-foreground mb-2">{property.title}</h3>
 
                 <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-primary">{property.price}</span>
+                    <span className="text-2xl font-bold text-primary">$ {property.price}</span>
                 </div>
 
                 <div className="flex items-center justify-between text-sm text-muted-foreground mb-6">
@@ -44,12 +45,13 @@ const CardListings = ({ property }: CardListingsProps) => {
                     </div>
                 </div>
 
-                <div
-                        // to={`/jobs/${job.id}`}
-                        className="h-[36px] bg-primary hover:bg-primary/90 text-black px-4 py-2 rounded-lg text-center text-sm"
+                <Link href={`/property/${property.id}`}
                     >
+                        <div className="h-[36px] bg-primary hover:bg-primary/90 text-black px-4 py-2 rounded-lg text-center text-sm font-semibold">
+
                         Read More
-                    </div>
+                        </div>
+                    </Link>
             </div>
         </div>
     )

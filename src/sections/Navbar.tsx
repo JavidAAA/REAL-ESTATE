@@ -30,9 +30,9 @@ export function Navbar() {
     return (
         <nav
             className={clsx(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-200",
-                hasScroll && "bg-black backdrop-blur-lg border-b border-gray-800",
-                isOpen && "bg-black"
+                "fixed top-0 left-0 right-0 z-50 transition-all",
+                hasScroll && "bg-black backdrop-blur-lg border-b border-gray-800 duration-200",
+                isOpen && "bg-black duration-0"
             )}
         >
             <div className="max-w-7xl mx-auto px-7 md:px-9 xl:px-0 py-5 flex items-center justify-between">
@@ -77,14 +77,14 @@ export function Navbar() {
                 "md:hidden transition-all duration-500 overflow-hidden",
                 isOpen ? "h-screen" : "h-0"
             )}>
-                <div className="flex flex-col items-start translate-x-16 justify-center h-full space-y-4 bg-black transform -translate-y-24 gap-3">
+                <div className="flex flex-col items-start justify-center h-full space-y-4 bg-black transform -translate-y-24 gap-3">
                     {navigation.map((item) => (
                         <Link
                             key={item.name}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
                             className={clsx(
-                                "text-4xl uppercase font-bold transition-colors hover:text-gold-500",
+                                "text-4xl uppercase font-bold transition-colors hover:text-gold-500 translate-x-16",
                                 pathname === item.href ? "text-gold-500" : "text-white"
                             )}
                         >

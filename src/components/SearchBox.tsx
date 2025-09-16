@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { HiAdjustmentsHorizontal } from 'react-icons/hi2'
 import { listingsProperties, ListingProperty } from '@/constants'
+import Link from 'next/link'
 
 const SearchBox = () => {
   const [query, setQuery] = useState("")
@@ -39,10 +40,12 @@ const SearchBox = () => {
             className="sm:flex-[0.9] h-[60%] bg-gray-100 block rounded-lg outline-none px-4 placeholder:text-sm text-black"
           />
           <div className="flex items-center space-x-4">
-            <div className="lg:flex hidden items-center cursor-pointer">
-              <HiAdjustmentsHorizontal className="text-gray-700 w-6 h-6" />
-              <p className="text-gray-700 font-semibold">Advanced</p>
-            </div>
+            <Link href="/listings">
+              <div className="lg:flex hidden items-center cursor-pointer">
+                <HiAdjustmentsHorizontal className="text-gray-700 w-6 h-6" />
+                <p className="text-gray-700 font-semibold">Advanced</p>
+              </div>
+            </Link>
 
             <div className="w-12 h-12 bg-primary flex items-center hover:bg-primary/80 transition-all duration-150 cursor-pointer justify-center text-white rounded-full -mr-2">
               <FaSearch />

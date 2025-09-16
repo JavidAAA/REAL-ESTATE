@@ -26,7 +26,7 @@ export const listingsProperties = [
   },
   {
     id: 2,
-    title: "Keraton Jimbaran Resort",
+    title: "Keraton Jimbaran",
     location: "Jimbaran, Bali",
     price: "8,200,000",  
     image: "/mulia.webp",
@@ -38,7 +38,7 @@ export const listingsProperties = [
   {
     id: 3,
     title: "Abi Bali Resort",
-    location: "Jimbaran Bali",
+    location: "Jimbaran, Bali",
     price: "8,200,000",
     image: "/mulia.webp",
     beds: 2,
