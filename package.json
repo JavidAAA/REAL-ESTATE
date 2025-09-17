@@ -17,6 +17,7 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "react-scroll": "^1.9.3",
+    "react-slideshow-image": "^4.3.2",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.4.0",
     "tailwindcss-animate": "^1.0.7"

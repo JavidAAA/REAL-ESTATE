@@ -6,6 +6,11 @@
   * {
     @apply border-border;
   }
+  .each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
