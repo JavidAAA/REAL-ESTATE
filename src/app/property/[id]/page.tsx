@@ -4,13 +4,14 @@ import ImageSlider from "@/components/ImageSlider"
 import { Navbar } from "@/sections/Navbar"
 import Footer from "@/sections/Footer"
 import { PropertyDetails } from "@/sections/Property/PropertyDetails"
+import PropertyFeatures from "@/sections/Property/PropertyFeatures"
 
 interface PropertyPageProps {
   params: Promise<{ id: string }>
 }
 
 export default async function PropertyPage({ params }: PropertyPageProps) {
- const { id } = await params
+  const { id } = await params
 
   const property = listingsProperties.find(
     (prop) => prop.id.toString() === id
@@ -28,21 +29,25 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="pt-24">
         <ImageSlider autoSlide={true} autoSlideInterval={4000}>
-          {slides.map((image, i) => (
+          {property.carousel?.map((image, i) => (
             <div key={i}>
-              <img src={image} alt={`slide-${i}`} className="w-full h-[500px] object-cover"/>
+              <img
+                src={image}
+                alt={`slide-${i}`}
+                className="w-full h-[500px] object-cover"
+              />
             </div>
           ))}
         </ImageSlider>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-7 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <PropertyDetails property={property} />
-              {/* <PropertyFeatures features={property.features} amenities={property.amenities} /> */}
+              <PropertyFeatures features={property.features} amenities={property.amenities} />
             </div>
             <div className="lg:col-span-1">
               {/* <ContactAgent property={property} /> */}
@@ -50,7 +55,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

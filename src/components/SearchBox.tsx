@@ -58,14 +58,15 @@ const SearchBox = () => {
       {results.length > 0 && (
         <div className="absolute w-full mt-2 bg-white rounded-lg shadow-lg max-h-48 overflow-y-auto z-50">
           {results.map((property) => (
-            <div
-              key={property.id}
-              className="p-4 border-b last:border-none hover:bg-gray-50 cursor-pointer"
-            >
-              <p className="font-semibold text-black">{property.title}</p>
-              <p className="text-sm text-gray-500">{property.location}</p>
-              <p className="text-primary font-bold">{property.price}</p>
-            </div>
+            <Link href={`/property/${property.id}`} key={property.id}>
+              <div
+                className="p-4 border-b last:border-none hover:bg-gray-50 cursor-pointer"
+              >
+                <p className="font-semibold text-black">{property.title}</p>
+                <p className="text-sm text-gray-500">{property.location}</p>
+                <p className="text-primary font-bold">{property.price}</p>
+              </div>
+            </Link>
           ))}
         </div>
       )}
