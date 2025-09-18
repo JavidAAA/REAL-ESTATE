@@ -11,21 +11,18 @@ const stats = [
 
 const AboutMain = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 w-full">
+    <section className="px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
-          <div>
+          <div className='order-2 md:order-1'>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
               Your Trusted Partner in Luxury Real Estate
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              With over 15 years of experience in the luxury real estate market, we specialize in connecting discerning
-              clients with exceptional properties. Our commitment to excellence and personalized service has made us the
-              preferred choice for luxury property transactions.
+              PT Global Properti Inovasi, based in Denpasar, Bali, is a real estate company providing integrated solutions in property sales and leasing, management, marketing, consulting, and asset valuation across Indonesia.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              From exclusive penthouses to waterfront estates, we curate only the finest properties that meet our
-              rigorous standards of luxury, location, and investment potential.
+              With an experienced team and data-driven approach, we help clients achieve their property goals. Our vision is to be a trusted partner in Indonesia’s real estate industry by delivering professional, transparent, and innovative services. PT Global Properti Inovasi is your reliable partner in property management and development.
             </p>
             <Link href='/about'>
                 <div className='bg-primary text-center hover:bg-primary/90 px-10 py-2 rounded-lg w-full max-w-44 text-black font-semibold'>
@@ -34,7 +31,7 @@ const AboutMain = () => {
             </Link>
           </div>
 
-          <div className="relative">
+          <div className="relative order-1 md:order-2">
             <img src="/mulia.webp" alt="About Us" className="rounded-2xl shadow-2xl" />
           </div>
         </div>

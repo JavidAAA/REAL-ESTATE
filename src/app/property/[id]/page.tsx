@@ -5,6 +5,7 @@ import { Navbar } from "@/sections/Navbar"
 import Footer from "@/sections/Footer"
 import { PropertyDetails } from "@/sections/Property/PropertyDetails"
 import PropertyFeatures from "@/sections/Property/PropertyFeatures"
+import ContactAgent from "@/sections/Property/ContactAgent"
 
 interface PropertyPageProps {
   params: Promise<{ id: string }>
@@ -50,7 +51,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               <PropertyFeatures features={property.features} amenities={property.amenities} />
             </div>
             <div className="lg:col-span-1">
-              {/* <ContactAgent property={property} /> */}
+              <ContactAgent property={property}/>
             </div>
           </div>
         </div>

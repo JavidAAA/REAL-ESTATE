@@ -107,10 +107,10 @@ const PropertyFilter = ({ filters, onFiltersChange }: PropertyFilterProps) => {
           className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:border-primary"
         >
           <option value="">Any</option>
-          <option value="1">1+</option>
-          <option value="2">2+</option>
-          <option value="3">3+</option>
-          <option value="4">4+</option>
+          <option value="100">100+</option>
+          <option value="200">200+</option>
+          <option value="300">300+</option>
+          <option value="400">400+</option>
         </select>
       </div>
 
