@@ -6,6 +6,7 @@ import Footer from "@/sections/Footer"
 import { PropertyDetails } from "@/sections/Property/PropertyDetails"
 import PropertyFeatures from "@/sections/Property/PropertyFeatures"
 import ContactAgent from "@/sections/Property/ContactAgent"
+import Image from "next/image"
 
 interface PropertyPageProps {
   params: Promise<{ id: string }>
@@ -22,23 +23,19 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
     notFound()
   }
 
-  const slides = [
-    "/mulia.webp",
-    "/mulia2.webp",
-    "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-  ]
-
   return (
     <div>
       <Navbar />
       <div className="pt-24">
         <ImageSlider autoSlide={true} autoSlideInterval={4000}>
           {property.carousel?.map((image, i) => (
-            <div key={i}>
-              <img
+            <div key={i} className="relative w-full h-[500px]">
+              <Image
                 src={image}
                 alt={`slide-${i}`}
-                className="w-full h-[500px] object-cover"
+                fill
+                className="object-cover"
+                priority={i === 0}
               />
             </div>
           ))}
@@ -51,7 +48,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               <PropertyFeatures features={property.features} amenities={property.amenities} />
             </div>
             <div className="lg:col-span-1">
-              <ContactAgent property={property}/>
+              <ContactAgent property={property} />
             </div>
           </div>
         </div>

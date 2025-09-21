@@ -2,12 +2,14 @@ import React from 'react'
 import { ListingProperty } from '@/constants';
 import { MapPin, Bed, Square, Bath } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 
 type CardListingsProps = {
     property: ListingProperty;
+    showRest?: boolean; 
 }
 
-const CardListings = ({ property }: CardListingsProps) => {
+const CardListings = ({ property, showRest }: CardListingsProps) => {
     return (
         <div className='group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm'>
             <div className='relative overflow-hidden'>
@@ -33,25 +35,29 @@ const CardListings = ({ property }: CardListingsProps) => {
                 <div className="flex items-center justify-between text-sm text-muted-foreground mb-6">
                     <div className="flex items-center">
                         <Bed className="w-4 h-4 mr-1" />
-                        <span>{property.beds} beds</span>
+                        <span>{property.beds} room</span>
                     </div>
-                    <div className="flex items-center">
-                        <Bath className="w-4 h-4 mr-1" />
-                        <span>{property.baths} baths</span>
-                    </div>
+
+                    {showRest ? (
+                        <div className="flex items-center">
+                            <Bath className="w-4 h-4 mr-1" />
+                            <span>{property.rest} Restaurant</span>
+                        </div>
+                    ) : null}
+
                     <div className="flex items-center">
                         <Square className="w-4 h-4 mr-1" />
-                        <span>{property.sqft} sqft</span>
+                        <span>{property.sqft} m²</span>
                     </div>
                 </div>
 
                 <Link href={`/property/${property.id}`}
-                    >
-                        <div className="h-[36px] bg-primary hover:bg-primary/90 text-black px-4 py-2 rounded-lg text-center text-sm font-semibold">
+                >
+                    <div className="h-[36px] bg-primary hover:bg-primary/90 text-black px-4 py-2 rounded-lg text-center text-sm font-semibold">
 
                         Read More
-                        </div>
-                    </Link>
+                    </div>
+                </Link>
             </div>
         </div>
     )

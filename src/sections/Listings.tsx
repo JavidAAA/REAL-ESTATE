@@ -5,10 +5,11 @@ import CardListings from '@/components/CardListings'
 
 type ListingProps = {
   slice?: number
-  filteredProperties?: ListingProperty[] // tambahkan prop untuk filtered data
+  filteredProperties?: ListingProperty[]
+  showRest?: boolean; // tambahkan prop untuk filtered data
 }
 
-const Listings = ({ slice, filteredProperties }: ListingProps) => {
+const Listings = ({ slice, filteredProperties, showRest }: ListingProps) => {
   // Prioritaskan filteredProperties jika ada, baru slice logic
   let displayProperties: ListingProperty[]
   
@@ -41,7 +42,7 @@ const Listings = ({ slice, filteredProperties }: ListingProps) => {
     <div className='max-w-7xl mx-auto'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         {displayProperties.map((property) => (
-          <CardListings key={property.id} property={property} />
+          <CardListings key={property.id} property={property} showRest={showRest}/>
         ))}
       </div>
     </div>

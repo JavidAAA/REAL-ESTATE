@@ -1,12 +1,18 @@
+'use client'
+
 import ListingPage from '@/pages/ListingPage'
 import React from 'react'
 import Listings from '../Listings'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const MainListing = () => {
+    const [showRest, setShowRest] = useState(false)
+  
+
   return (
     <div className='py-20 px-4'>
-      <Listings slice={3} />
+      <Listings slice={3} showRest={true} />
 
 
       <div className="text-center mt-14 w-full">

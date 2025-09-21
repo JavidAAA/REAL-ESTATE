@@ -35,15 +35,15 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
           <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-2 mx-auto">
             <Bath className="w-6 h-6 text-primary" />
           </div>
-          <div className="text-2xl font-bold text-foreground">{property.baths}</div>
-          <div className="text-sm text-muted-foreground">Bathrooms</div>
+          <div className="text-2xl font-bold text-foreground">{property.rest}</div>
+          <div className="text-sm text-muted-foreground">Restaurant</div>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-2 mx-auto">
             <Square className="w-6 h-6 text-primary" />
           </div>
           <div className="text-2xl font-bold text-foreground">{property.sqft}</div>
-          <div className="text-sm text-muted-foreground">Sq Ft</div>
+          <div className="text-sm text-muted-foreground">Lot Size</div>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-2 mx-auto">
@@ -66,20 +66,12 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
           <h3 className="text-xl font-semibold text-foreground">Property Details</h3>
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Property Type:</span>
-              <span className="text-foreground">{property.type}</span>
-            </div>
-            <div className="flex justify-between">
               <span className="text-muted-foreground">Year Built:</span>
               <span className="text-foreground">{property.yearBuilt}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Lot Size:</span>
-              <span className="text-foreground">{property.lotSize}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Square Footage:</span>
-              <span className="text-foreground">{property.sqft} sq ft</span>
+              <span className="text-muted-foreground">Property Type:</span>
+              <span className="text-foreground">{property.type}</span>
             </div>
           </div>
         </div>
