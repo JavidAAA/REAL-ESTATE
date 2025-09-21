@@ -2,19 +2,25 @@ import React from 'react'
 import { ListingProperty } from '@/constants';
 import { MapPin, Bed, Square, Bath } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import Image from 'next/image';
 import { IoRestaurantOutline } from 'react-icons/io5';
 
 type CardListingsProps = {
     property: ListingProperty;
-    showRest?: boolean; 
+    showRest?: boolean;
 }
 
 const CardListings = ({ property, showRest }: CardListingsProps) => {
     return (
         <div className='group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm'>
             <div className='relative overflow-hidden'>
-                <img src={property.image} alt={property.title} className='w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300' />
+                <Image
+                    src={property.image}
+                    alt={property.title}
+                    width={400}           
+                    height={256}          
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className='absolute top-4 left-4'>
                     <div className="bg-primary text-black px-3 py-1 rounded-[5px] font-semibold text-sm">
                         {property.type}

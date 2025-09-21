@@ -70,7 +70,9 @@ export const listingsProperties = [
     ],
     carousel: [
       "/mulia.webp",
+      "/mulia3.webp",
       "/mulia2.webp",
+      "/mulia4.webp",
     ],
   },
   {
@@ -78,7 +80,7 @@ export const listingsProperties = [
     title: "Keraton Jimbaran",
     location: "Jimbaran, Bali",
     price: "39,956,000",
-    image: "/mulia.webp",
+    image: "/keraton3.jpg",
     beds: 102,
     rest: 2,
     sqft: "15.400",
@@ -111,13 +113,19 @@ export const listingsProperties = [
       "Hair Dryer",
       "Safety Box"
     ],
+     carousel: [
+      "/keraton.jpg",
+      "/keraton2.jpg",
+      "/keraton3.jpg",
+      "/keraton4.jpg",
+    ],
   },
   {
     id: 3,
     title: "Abi Bali Resort",
     location: "Jimbaran, Bali",
     price: "23,548,387",
-    image: "/mulia.webp",
+    image: "/abi.png",
     beds: 32,
     rest: 1,
     sqft: "10.000",
@@ -164,13 +172,19 @@ export const listingsProperties = [
       "Perlengkapan Mandi Gratis",
       "Room Service 24 Jam"
     ],
+     carousel: [
+      "/abi.png",
+      "/abi2.png",
+      "/abi3.png",
+      "/abi4.jpg",
+    ],
   },
   {
     id: 4,
     title: "Alam Ubud",
     location: "Ubud, Bali",
     price: "7,096,774",
-    image: "/mulia.webp",
+    image: "/ubud.jpg",
     beds: 2,
     rest: 2,
     sqft: "40.000",
@@ -206,13 +220,19 @@ export const listingsProperties = [
       "Spa & Layanan Pijat",
       "Room Service"
     ],
+    carousel: [
+      "/ubud.jpg",
+      "/ubud2.jpg",
+      "/ubud3.jpeg",
+      "/ubud4.jpg",
+    ],
   },
   {
     id: 5,
     title: "The Royal Beach",
     location: "Seminyak, Bali",
     price: "97,419,354",
-    image: "/mulia.webp",
+    image: "/theroyal.webp",
     beds: 127,
     rest: 3,
     sqft: "43.000",
@@ -249,6 +269,10 @@ export const listingsProperties = [
       "Balkon / Teras",
       "Room Service 24 jam",
       "Free Parkir di lokasi"
+    ],
+     carousel: [
+      "/theroyal.webp",
+      "/theroyal2.webp",
     ],
   },
 

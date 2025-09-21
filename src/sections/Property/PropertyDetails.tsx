@@ -62,7 +62,7 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
       </div>
 
       {/* Additional Details */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5 border md:border-none border-gray-50 p-3 rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5 border md:border-none border-border p-3 rounded-lg">
         <div className="space-y-3">
           <h3 className="text-xl font-semibold text-foreground">Property Details</h3>
           <div className="space-y-2">

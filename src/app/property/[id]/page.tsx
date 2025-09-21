@@ -37,6 +37,8 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                 className="object-cover"
                 priority={i === 0}
               />
+              <div className="absolute inset-0 bg-black/40 " />
+              
             </div>
           ))}
         </ImageSlider>
