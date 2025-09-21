@@ -1,5 +1,6 @@
 import { MapPin, Bed, Bath, Square, Calendar } from "lucide-react"
 import { ListingProperty } from "@/constants";
+import { IoRestaurantOutline } from "react-icons/io5";
 
 
 interface PropertyDetailsProps {
@@ -33,7 +34,7 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-2 mx-auto">
-            <Bath className="w-6 h-6 text-primary" />
+            <IoRestaurantOutline className="w-6 h-6 text-primary" />
           </div>
           <div className="text-2xl font-bold text-foreground">{property.rest}</div>
           <div className="text-sm text-muted-foreground">Restaurant</div>

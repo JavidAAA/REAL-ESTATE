@@ -83,18 +83,7 @@ const ContactRight = () => {
                 </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-card border-bordertext-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
-                <div className="p-0">
-                    <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
-                        <div className="text-center">
-                            <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                            <p className="text-muted-foreground">Interactive Map</p>
-                            <p className="text-sm text-muted-foreground">123 Luxury Avenue, Beverly Hills, CA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     )
 }

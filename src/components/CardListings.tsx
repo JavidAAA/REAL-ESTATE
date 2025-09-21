@@ -3,6 +3,7 @@ import { ListingProperty } from '@/constants';
 import { MapPin, Bed, Square, Bath } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { IoRestaurantOutline } from 'react-icons/io5';
 
 type CardListingsProps = {
     property: ListingProperty;
@@ -32,16 +33,16 @@ const CardListings = ({ property, showRest }: CardListingsProps) => {
                     <span className="text-2xl font-bold text-primary">$ {property.price}</span>
                 </div>
 
-                <div className="flex items-center justify-between text-sm text-muted-foreground mb-6">
+                <div className="flex items-center justify-between text-sm md:text-xs xl:text-sm text-muted-foreground mb-6">
                     <div className="flex items-center">
                         <Bed className="w-4 h-4 mr-1" />
-                        <span>{property.beds} room</span>
+                        <span>{property.beds} Room</span>
                     </div>
 
                     {showRest ? (
-                        <div className="flex items-center">
-                            <Bath className="w-4 h-4 mr-1" />
-                            <span>{property.rest} Restaurant</span>
+                        <div className="items-center hidden md:flex">
+                            <IoRestaurantOutline className="w-4 h-4 mr-1" />
+                            <span>{property.rest} Resto</span>
                         </div>
                     ) : null}
 
