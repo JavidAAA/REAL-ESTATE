@@ -15,7 +15,7 @@ const HeroContact = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
+      <div className="relative z-10 max-w-4xl mx-auto px-7 sm:px-6 lg:px-8 text-center pt-16">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
           Get In
           <span className="block text-primary">Touch</span>

@@ -52,7 +52,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto space-y-6">
+    <div className="w-full mx-auto space-y-6">
       <div className="bg-black border border-neutral-800 rounded-xl p-6">
         <h2 className="text-lg font-semibold text-white mb-4">
           Request Information
@@ -64,7 +64,7 @@ export default function ContactForm() {
               type="text"
               placeholder="First Name *"
               required
-              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
               value={formData.firstName}
               onChange={(e) =>
                 setFormData({ ...formData, firstName: e.target.value })
@@ -74,7 +74,7 @@ export default function ContactForm() {
               type="text"
               placeholder="Last Name *"
               required
-              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
               value={formData.lastName}
               onChange={(e) =>
                 setFormData({ ...formData, lastName: e.target.value })
@@ -86,7 +86,7 @@ export default function ContactForm() {
             type="email"
             placeholder="Email *"
             required
-            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
@@ -96,7 +96,7 @@ export default function ContactForm() {
           <input
             type="tel"
             placeholder="Phone"
-            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-blue-500 focus:outline-none"
+            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
             value={formData.phone}
             onChange={(e) =>
               setFormData({ ...formData, phone: e.target.value })
@@ -107,7 +107,7 @@ export default function ContactForm() {
             placeholder="Message *"
             rows={4}
             required
-            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-blue-500 focus:outline-none resize-none"
+            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none resize-none"
             value={formData.message}
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })

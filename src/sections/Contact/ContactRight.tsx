@@ -28,7 +28,7 @@ const contactDetails = [
 
 const ContactRight = () => {
     return (
-        <div className="space-y-8">
+        <div className="space-y-8 px-5 lg:px-0">
             <div>
                 <h2 className="text-3xl font-bold text-foreground mb-6">Contact Information</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
