@@ -3,21 +3,23 @@ import { Mail, Phone, Linkedin } from "lucide-react"
 
 const team = [
   {
-    name: "Sarah Johnson",
-    role: "Founder & CEO",
-    image: "https://c4.wallpaperflare.com/wallpaper/527/433/265/sousuke-aizen-tite-kubo-anime-boys-bleach-purple-background-hd-wallpaper-preview.jpg",
-    bio: "With over 15 years in luxury real estate, Sarah has closed over $500M in transactions and leads our team with vision and expertise.",
-    email: "sarah@luxuryestate.com",
-    phone: "(555) 123-4567",
-  },
-  {
-    name: "Michael Chen",
-    role: "Co-Founder & COO",
-    image: "https://c4.wallpaperflare.com/wallpaper/527/433/265/sousuke-aizen-tite-kubo-anime-boys-bleach-purple-background-hd-wallpaper-preview.jpg",
-    bio: "Michael brings strategic insight and operational excellence, ensuring every client receives world-class service and results.",
-    email: "michael@luxuryestate.com",
-    phone: "(555) 123-4568",
-  },
+  name: "Putu Cahya Abadi",
+  role: "Founder & CEO",
+  image: "/putu.jpg",
+  bio: "Expert in Bali’s luxury real estate, connecting investors with prime hotels, villas, and land opportunities.",
+  email: "putu.gpi@gmail.com",
+  phone: "+62 817-359-851",
+},
+{
+  name: "Minto Sugiarto Halim",
+  role: "Co-Founder & COO",
+  image: "/andre.jpg",
+  bio: "Focused on connecting investors with Bali’s prime hotels and land, delivering smooth deals and lasting value.",
+  email: "putu.gpi@gmail.com",
+  phone: "+62 812-3833-9250",
+},
+
+
 ]
 
 const TeamAbout = () => {

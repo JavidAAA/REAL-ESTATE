@@ -10,7 +10,7 @@ interface PropertyFeaturesProps {
 export default function PropertyFeatures({ features, amenities }: PropertyFeaturesProps) {
   return (
     <div>
-      <div className="space-y-8 mt-12">
+      <div className="space-y-8 mt-8">
         {/* Features */}
         <div className="bg-black border-border text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
           <div className="grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">

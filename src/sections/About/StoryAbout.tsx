@@ -33,7 +33,7 @@ const StoryAbout = () => {
 
           <div className="relative">
             <img
-              src="/mulia.webp"
+              src="/aboutt.jpg"
               alt="Our Office"
               className="rounded-2xl shadow-2xl"
             />

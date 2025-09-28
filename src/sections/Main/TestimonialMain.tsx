@@ -3,29 +3,30 @@ import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Property Investor",
-    content:
-      "Exceptional service and attention to detail. They helped me find the perfect investment property that exceeded all my expectations.",
-    rating: 5,
-    image: "https://c4.wallpaperflare.com/wallpaper/527/433/265/sousuke-aizen-tite-kubo-anime-boys-bleach-purple-background-hd-wallpaper-preview.jpg",
-  },
-  {
-    name: "Michael Chen",
-    role: "CEO",
-    content:
-      "The team's expertise in luxury real estate is unmatched. They made the entire process seamless and stress-free.",
-    rating: 5,
-    image: "https://c4.wallpaperflare.com/wallpaper/527/433/265/sousuke-aizen-tite-kubo-anime-boys-bleach-purple-background-hd-wallpaper-preview.jpg",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Entrepreneur",
-    content:
-      "From the initial consultation to closing, their professionalism and market knowledge were evident every step of the way.",
-    rating: 5,
-    image: "https://c4.wallpaperflare.com/wallpaper/527/433/265/sousuke-aizen-tite-kubo-anime-boys-bleach-purple-background-hd-wallpaper-preview.jpg",
-  },
+  name: "Made Wirawan",
+  role: "Tourism Entrepreneur",
+  content:
+    "Truly professional service. They helped me secure the right villa property in a prime tourist area, perfect for my business.",
+  rating: 5,
+  image: "/unnamed.jpg",
+},
+{
+  name: "Ayu Kartika",
+  role: "Architect",
+  content:
+    "The team really understood my needs. The whole transaction was smooth, and they were always responsive to every question.",
+  rating: 5,
+  image: "/unnamed.jpg",
+},
+{
+  name: "I Wayan Putra",
+  role: "Property Investor",
+  content:
+    "Very satisfied with their service. The properties offered truly match the premium standards I was looking for in Bali.",
+  rating: 5,
+  image: "/unnamed.jpg",
+},
+
 ]
 
 const TestimonialMain = () => {

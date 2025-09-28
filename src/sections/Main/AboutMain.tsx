@@ -32,7 +32,7 @@ const AboutMain = () => {
           </div>
 
           <div className="relative order-1 md:order-2">
-            <img src="/mulia.webp" alt="About Us" className="rounded-2xl shadow-2xl" />
+            <img src="/aboutt.jpg" alt="About Us" className="rounded-2xl shadow-2xl" />
           </div>
         </div>
 

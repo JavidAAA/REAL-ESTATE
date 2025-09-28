@@ -6,17 +6,17 @@ const contactDetails = [
     {
         icon: MapPin,
         title: "Office Address",
-        details: ["123 Luxury Avenue", "Beverly Hills, CA 90210"],
+        details: ["Jl. Bypass Ngurah Rai No.21, Sanur, Denpasar Selatan, Bali"],
     },
     {
         icon: Phone,
         title: "Phone Numbers",
-        details: ["Main: (555) 123-4567", "Direct: (555) 123-4568"],
+        details: ["Main: +62 817-359-851", "Direct: +62 812‑3833‑9250"],
     },
     {
         icon: Mail,
         title: "Email Addresses",
-        details: ["info@luxuryestate.com", "sales@luxuryestate.com"],
+        details: ["admin@globalpropertyinnovation.com", "putu.gpi@gmail.com"],
     },
     {
         icon: Clock,
@@ -66,24 +66,35 @@ const ContactRight = () => {
                     <div className="space-y-3">
 
                         <button className='w-full'>
-                            <div className='justify-start flex items-center bg-primary hover:bg-primary/80 text-black py-2 px-3 rounded-lg'>
+                            <a
+                                href="https://wa.me/62817359851?text=Halo%20saya%20ingin%20konsultasi"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='justify-start flex items-center bg-primary hover:bg-primary/80 text-black py-2 px-3 rounded-lg'
+                            >
                                 <Calendar className="w-4 h-4 mr-3" />
                                 <p className='text-[14px]'>Schedule a Consultation</p>
-                            </div>
+                            </a>
                         </button>
 
                         <button className='w-full'>
-                            <div className='justify-start flex items-center bg-black text-white hover:text-white/80 py-2 px-3 rounded-lg border border-white hover:border-white/80'>
-                                 <Phone className="w-4 h-4 mr-3" />
+                            <a
+                                href="https://wa.me/62817359851?text=Halo%20bisa%20hubungi%20saya%20kembali"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='justify-start flex items-center bg-black text-white hover:text-white/80 py-2 px-3 rounded-lg border border-white hover:border-white/80'
+                            >
+                                <Phone className="w-4 h-4 mr-3" />
                                 <p className='text-[14px]'>Request a Call Back</p>
-                            </div>
+                            </a>
                         </button>
+
 
                     </div>
                 </div>
             </div>
 
-            
+
         </div>
     )
 }
