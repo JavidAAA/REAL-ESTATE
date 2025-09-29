@@ -22,7 +22,7 @@ export async function sendEmail(formData: {
     
     const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
-      to: 'paramasuraqutay@gmail.com',
+      to: 'putu.gpi@gmail.com',
       subject: 'New Property Inquiry',
       html: `
         <h1>New Contact Form Submission</h1>
