@@ -1,7 +1,7 @@
 "use server";
 
-import { Resend } from "resend";
-import type { SendEmailResult } from "../lib/types";
+import { getResend } from "@/lib/resend"; // Import fungsi getResend
+import type { SendEmailResult } from "../../lib/types";
 
 export async function sendEmail(formData: {
   firstName: string;
@@ -11,11 +11,7 @@ export async function sendEmail(formData: {
   message: string;
 }): Promise<SendEmailResult> {
   try {
-    if (!process.env.RESEND_API_KEY) {
-      return { success: false, error: "API key not configured", details: "Missing key" };
-    }
-
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = getResend(); // Panggil fungsi ini
 
     const { data, error } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
@@ -39,7 +35,7 @@ export async function sendEmail(formData: {
   } catch (err) {
     return { 
       success: false, 
-      error: "Unexpected error occurred", 
+      error: err instanceof Error ? err.message : "Unexpected error occurred", 
       details: err instanceof Error ? err.message : String(err) 
     };
   }
