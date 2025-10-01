@@ -5,7 +5,7 @@ const team = [
   {
   name: "Putu Cahya Abadi",
   role: "Founder & CEO",
-  image: "/putu.jpg",
+  image: "/putu.JPG",
   bio: "Expert in Bali’s luxury real estate, connecting investors with prime hotels, villas, and land opportunities.",
   email: "putu.gpi@gmail.com",
   phone: "+62 817-359-851",

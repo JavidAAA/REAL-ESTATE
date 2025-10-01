@@ -16,7 +16,7 @@ const ContactAgent = ({ property }: PropertyDetailsProps) => {
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6">
                         {/* Avatar */}
                         <Image
-                            src="/putu.jpg"
+                            src="/putu.JPG"
                             alt="Sarah Johnson"
                             width={65}
                             height={65}
