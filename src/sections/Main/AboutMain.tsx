@@ -14,7 +14,7 @@ const AboutMain = () => {
     <section className="px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
-          <div className='order-2 md:order-1'>
+          <div className='order-2 lg:order-1'>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
               Your Trusted Partner in Luxury Real Estate
             </h2>
@@ -31,7 +31,7 @@ const AboutMain = () => {
             </Link>
           </div>
 
-          <div className="relative order-1 md:order-2">
+          <div className="relative order-1 lg:order-2">
             <img src="/aboutt.jpg" alt="About Us" className="rounded-2xl shadow-2xl" />
           </div>
         </div>
