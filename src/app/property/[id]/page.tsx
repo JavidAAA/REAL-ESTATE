@@ -1,3 +1,5 @@
+'use server'
+
 import { notFound } from "next/navigation"
 import { listingsProperties } from "@/constants"
 import ImageSlider from "@/components/ImageSlider"

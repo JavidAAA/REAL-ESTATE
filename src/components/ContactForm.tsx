@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { sendEmail } from "@/lib/resend";
+import { sendEmail } from "../lib/actions";
+import type { SendEmailResult } from "../lib/types";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -19,7 +20,6 @@ export default function ContactForm() {
     setLoading(true);
     setStatus("");
 
-    // Validasi form
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       setStatus("❌ Please fill in all required fields");
       setLoading(false);
@@ -27,18 +27,11 @@ export default function ContactForm() {
     }
 
     try {
-      const result = await sendEmail(formData);
+      const result: SendEmailResult = await sendEmail(formData);
 
       if (result.success) {
         setStatus("✅ Email berhasil dikirim!");
-        // Reset form setelah berhasil
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
       } else {
         setStatus(`❌ Error: ${result.error || "Gagal mengirim email"}`);
         console.error("Send email error:", result.details);
@@ -54,9 +47,7 @@ export default function ContactForm() {
   return (
     <div className="w-full mx-auto space-y-6">
       <div className="bg-black border border-neutral-800 rounded-xl p-6">
-        <h2 className="text-lg font-semibold text-white mb-4">
-          Request Information
-        </h2>
+        <h2 className="text-lg font-semibold text-white mb-4">Request Information</h2>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -64,21 +55,17 @@ export default function ContactForm() {
               type="text"
               placeholder="First Name *"
               required
-              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
+              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2"
               value={formData.firstName}
-              onChange={(e) =>
-                setFormData({ ...formData, firstName: e.target.value })
-              }
+              onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
             />
             <input
               type="text"
               placeholder="Last Name *"
               required
-              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
+              className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2"
               value={formData.lastName}
-              onChange={(e) =>
-                setFormData({ ...formData, lastName: e.target.value })
-              }
+              onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
             />
           </div>
 
@@ -86,47 +73,45 @@ export default function ContactForm() {
             type="email"
             placeholder="Email *"
             required
-            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
+            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2"
             value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           />
 
           <input
             type="tel"
             placeholder="Phone"
-            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none"
+            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2"
             value={formData.phone}
-            onChange={(e) =>
-              setFormData({ ...formData, phone: e.target.value })
-            }
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           />
 
           <textarea
             placeholder="Message *"
             rows={4}
             required
-            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 focus:border-primary focus:outline-none resize-none"
+            className="w-full rounded-md border border-neutral-700 bg-black text-white px-3 py-2 resize-none"
             value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-md bg-primary text-black font-semibold py-2 hover:bg-primary/85 disabled:bg-gray-600 disabled:cursor-not-allowed transition"
+            className="w-full rounded-md bg-primary text-black font-semibold py-2 hover:bg-primary/85 disabled:bg-gray-600"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
 
         {status && (
-          <div className={`text-sm mt-4 p-3 rounded-md ${
-            status.includes('✅') ? 'bg-green-900/50 text-green-400' : 'bg-red-900/50 text-red-400'
-          }`}>
+          <div
+            className={`text-sm mt-4 p-3 rounded-md ${
+              status.includes("✅")
+                ? "bg-green-900/50 text-green-400"
+                : "bg-red-900/50 text-red-400"
+            }`}
+          >
             {status}
           </div>
         )}
