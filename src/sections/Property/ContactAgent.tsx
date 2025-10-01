@@ -17,7 +17,7 @@ const ContactAgent = ({ property }: PropertyDetailsProps) => {
                         {/* Avatar */}
                         <Image
                             src="/putu.JPG"
-                            alt="Sarah Johnson"
+                            alt="Putu Cahya"
                             width={65}
                             height={65}
                             className="rounded-full object-cover shadow-md"
