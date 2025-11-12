@@ -51,5 +51,4 @@ This project is designed to represent the identity and luxury style of the brand
 
 > 📸 Homepage preview  
 
-```markdown
-[Homepage](/public/sshome.png)
+![Homepage](./public/sshome.png)
