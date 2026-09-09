@@ -47,8 +47,3 @@ This project is designed to represent the identity and luxury style of the brand
 
 ---
 
-## 🖼️ Screenshots
-
-📸 Homepage preview  
-
-![Homepage](./public/sshome.png)
